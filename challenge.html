@@ -7,14 +7,14 @@
 	<style type="text/css">
 	#box{
 		background-color: green;
-		height: 200px;
-		width: 200px;
+		height: 20px;
+		width: 20px;
 		display: none;
 	}
 	#circle{
 		background-color: green;
-		height: 200px;
-		width: 200px;
+		height: 20px;
+		width: 20px;
 		display: none;
 		border-radius: 50%;
 	}
@@ -37,6 +37,7 @@
 			shape = getShape();
 			//does both of these things at the indicated time
 			createdTime = Date.now();
+			document.getElementById(shape).style.backgroundColor=getRandomColor();
 			document.getElementById(shape).style.display="block";
 		}, time);
 
@@ -52,7 +53,18 @@
 			return "box";
 		}
 	}
+	//randomColor
+	function getRandomColor() {
+	    var letters = '0123456789ABCDEF'.split('');
+	    var color = '#';
+	    for (var i = 0; i < 6; i++ ) {
+	        color += letters[Math.floor(Math.random() * 16)];
+	    }
+	    return color;
+	}
 	
+	//change size of element
+
 
 	document.getElementById("box").onclick=function(){
 		clickedTime = Date.now();
