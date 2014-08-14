@@ -3,6 +3,7 @@
 	var time = Math.random() * 5000;
 	var shape;
 	var top;var bottom;var left;var right;
+	var totals = [];
 	
 	//dislay the box after 3 seconds
 	function showBox(time){
@@ -10,10 +11,10 @@
 			shape = getShape();
 			//does both of these things at the indicated time
 			createdTime = Date.now();
-			document.getElementById(shape).style.top=Math.random() * 350+"px";
-			document.getElementById(shape).style.bottom=Math.random() * 350+"px";
-			document.getElementById(shape).style.left=Math.random() * 800+"px";
-			document.getElementById(shape).style.right=Math.random() * 800+"px";
+			document.getElementById(shape).style.top=Math.random() * 300+"px";
+			document.getElementById(shape).style.bottom=Math.random() * 300+"px";
+			document.getElementById(shape).style.left=Math.random() * 100+"%";
+			document.getElementById(shape).style.right=Math.random() * 100+"%";
 			document.getElementById(shape).style.backgroundColor=getRandomColor();
 			document.getElementById(shape).style.display="block";
 		}, time);

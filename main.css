@@ -22,3 +22,12 @@
 	#time{
 		font-weight: bold;
 	}
+	#currentTime{
+		float:left;
+	}
+
+	#overallTime{
+		float: left;
+		position: relative;
+		left: 13%;
+	}
