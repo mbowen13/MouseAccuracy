@@ -31,3 +31,11 @@
 		position: relative;
 		left: 13%;
 	}
+	#sampleSize {
+		font-weight: bold;
+
+	}
+
+	#reactionAverage{
+		font-weight: bold;
+	}

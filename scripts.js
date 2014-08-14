@@ -41,7 +41,14 @@
 	    return color;
 	}
 	
-	//change size of element
+	function reactionAverage(){
+		var sum = 0;
+		for(var i = 0; i < totals.length; i++){
+			sum += totals[i];
+		}
+		return sum / totals.length;
+
+	}
 
 
 	document.getElementById("box").onclick=function(){
@@ -50,6 +57,9 @@
 		reactionTime = (clickedTime - createdTime) / 1000;
 		this.style.display="none";
 		document.getElementById("time").innerHTML=reactionTime;
+		totals.push(reactionTime);
+		document.getElementById("sampleSize").innerHTML=totals.length;
+		document.getElementById("reactionAverage").innerHTML=reactionAverage();
 		time = Math.random() * 5000;
 		showBox(time);
 	}
@@ -60,6 +70,9 @@
 		reactionTime = (clickedTime - createdTime) / 1000;
 		this.style.display="none";
 		document.getElementById("time").innerHTML=reactionTime;
+		totals.push(reactionTime);
+		document.getElementById("sampleSize").innerHTML=totals.length;
+		document.getElementById("reactionAverage").innerHTML=reactionAverage();
 		time = Math.random() * 5000;
 		showBox(time);
 	}
